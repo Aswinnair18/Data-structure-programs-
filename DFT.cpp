@@ -26,12 +26,6 @@ int main()
     printf("Enter number of vertices: ");
     scanf("%d", &n);
 
-    if(n < 1 || n > MAX)
-    {
-        printf("Invalid number of vertices!");
-        return 1;
-    }
-
     printf("Enter adjacency matrix:\n");
 
     for(i = 0; i < n; i++)
@@ -50,15 +44,8 @@ int main()
     printf("Enter starting vertex (0 to %d): ", n-1);
     scanf("%d", &start);
 
-    if(start < 0 || start >= n)
-    {
-        printf("Invalid starting vertex!");
-        return 1;
-    }
-
     printf("DFS Traversal: ");
     DFS(start);
 
     return 0;
 }
-
